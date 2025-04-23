@@ -1,4 +1,5 @@
 <!DOCTYPE html>\
+
 <html lang="en">
     
 <head>
@@ -6,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewport" content="width=device-width, intial-scale-1.0">
     <title>Personal Portfolio Website</title>
-    <link rel="stylesheet " href="style.css"
+    <link rel="stylesheet " href="style.css">
 </head>
 
 <body> <!-- only every one <body> is allowed in one html file-->
@@ -15,18 +16,19 @@
 
             <nav>
                 <img src="images/logoplaceholder.png" class="logo">
-                <ul>  <!-- Here we insert an unordered list with links defined by the <ul> tag with then <li>-->
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Education</a></li>
+                <ul>  <!-- Here we insert an unordered list with links defined by the <ul> tag with then <li> list item tag-->
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#education" onclick="document.getElementById('tab-education').click()">Education</a></li>
                     <li><a href="#">Portfolio</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
-
+            
+            <!-- The bold introduction, with name and affiliation-->
             <div class="header-text">
-                <p>CS/Stats Student at The University of Toronto</p>
-                <h1>Hi, I'm <span>Victor</span><br> Jiang from Canada</h1>
+                <h1>Hi, I'm <span>Victor Jiang </span><br> from Canada, </h1>
+                <p>Currently a Computer Science and Statistics student <br> at The University of Toronto</p>
             </div>
 
         </div>
@@ -34,10 +36,11 @@
 <!-------------------------about--------------------------->
     <div id="about">
         <div class="container">
+            <!-- within the container-->
             <div class="row">
-
+                <!-- within the container, seperation of items another column of items, left image, right about me and description-->
                 <div class="about-col-1">
-                    <img src="Pfp.jpg">
+                    <img src="images/profilepicture.jpg">
                 </div>
 
                 <div class="about-col-2">
@@ -49,7 +52,7 @@
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                         <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class= "tab-links" id = "tab-education" onclick="opentab('education', this)">Education</p>
                     </div>
 
                     <div class="tab-contents active-tab" id="skills">
@@ -62,17 +65,17 @@
 
                     <div class="tab-contents" id="experience">
                         <ul>
-                            <li><span>Skill goes here</span><br>Description goes here</li>
-                            <li><span>Skill goes here</span><br>Description goes here</li>
-                            <li><span>Skill goes here</span><br>Description goes here</li>
+                            <li><span>Experience1 goes here</span><br>Description goes here</li>
+                            <li><span>Experience2 goes here</span><br>Description goes here</li>
+                            <li><span>Experience3 goes here</span><br>Description goes here</li>
                         </ul>
                     </div>
                         
                     <div class="tab-contents" id="education">
-                        <ul></ul>
-                            <li><span>Skill goes here</span><br>Description goes here</li>
-                            <li><span>Skill goes here</span><br>Description goes here</li>
-                            <li><span>Skill goes here</span><br>Description goes here</li>
+                        <ul>
+                            <li><span>Education1 goes here</span><br>Description goes here</li>
+                            <li><span>Education2 goes here</span><br>Description goes here</li>
+                            <li><span>Education3 goes here</span><br>Description goes here</li>
                         </ul>
                     </div>
 
@@ -80,21 +83,22 @@
             </div>
         </div>
     </div>
-
+    <!-- need to loop through the values, not the property names.-->
     <script>
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabconents = document.getElementsByClassName("tab-contents");
+        
+        const tablinks = document.querySelectorAll(".tab-links");  
+        const tabcontents = document.querySelectorAll(".tab-contents");
         
         function opentab(tabname){
-            for(i in tablinks){
-                i.classList.remove("active-link");
-            }
-            for(j in tabconents){
-                j.classList.remove("active-tab");
-            }
+            tablinks.forEach(link => link.classList.remove("active-link"));
+            tabcontents.forEach(content => content.classList.remove("active-tab"));
+
             event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
+            document.getElementById(tabname).classList.add("active-tab")
         }
+
+
+       
 
     </script>
 
