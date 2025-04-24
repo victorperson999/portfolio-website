@@ -75,8 +75,7 @@ nav ul li a:hover::after{
 /*----------------about-------------*/
 #about{
     padding: 80px 0;
-    color: #a18c8c98;
-
+    color: #d0d8c9ab;
 }
 .row{
     display: flex;
@@ -141,5 +140,23 @@ nav ul li a:hover::after{
 }
 .tab-contents.active-tab{
     display: block
+}
+#portfolio{
+    width: 90%;
+    height: 75vh;
+    border: 2px solid goldenrod;
+    margin: auto;
+    padding-top: 20px;
+    padding-right: 30px;
+    padding-left: 80px;
+    padding-bottom: 50px;
+    background-color: cornflowerblue;
+    
+    
+}
+.portfolio-rows{
+    display: grid;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
