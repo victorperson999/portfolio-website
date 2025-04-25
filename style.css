@@ -87,7 +87,7 @@ nav ul li a:hover::after{
 }
 .about-col-1 img{
     width: 175%;
-    border-radius: 150px
+    border-radius: 100px
 }
 .about-col-2{
     flex-basis: 60%;
@@ -146,17 +146,77 @@ nav ul li a:hover::after{
     height: 75vh;
     border: 2px solid goldenrod;
     margin: auto;
-    padding-top: 20px;
+
+    padding-top: 50px;
     padding-right: 30px;
     padding-left: 80px;
     padding-bottom: 50px;
+
     background-color: cornflowerblue;
-    
+    color: white;
     
 }
-.portfolio-rows{
+.portfolio-items{
     display: grid;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-wrap: wrap;
+}
+.portfolio-items h1{
+    font-size: 50px;
+    position: relative;
+}
+.portfolio-experience{
+    width: 70%;
+    height: 70%;
+    border: 10px;
+    border: 10px solid black;
+    border-radius: 20%;
+
+    background-color: grey;
+    
+    
+    padding-top: 25px;
+    padding-bottom: 30px;
+    padding-left: 25px;
+    padding-right: 25px;
+
+    text-align: center;
+    display: inline-block;
+
+}
+.portfolio-experience img{
+    border-radius: 20%;
+}
+.portfolio-experience h1{
+    color: black;
+    margin-top: 10px;
+    font-size: 30px;
+    position: static;
+}
+.portfolio-skills{
+    width: 70%;
+    height: 70%;
+    border: 10px;
+    border: 10px solid black;
+
+    background-color: grey;
+    
+    
+    padding-top: 25px;
+    padding-bottom: 30px;
+    padding-left: 25px;
+    padding-right: 25px;
+
+    text-align: center;
+    display: inline-block;
+}
+.portfolio-skills img{
+    border-radius: 20%
+}
+.portfolio-skills h1{
+    color: black;
+    margin-top: 10px;
+    font-size: 30px;
+    position: static;
 }
 
