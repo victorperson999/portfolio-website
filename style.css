@@ -83,7 +83,7 @@ nav ul li a:hover::after{
     flex-wrap: wrap;
 }
 .about-col-1{
-    flex-basis: 15%; /*------this means the with of the column-*/
+    flex-basis: 20%; /*------this means the with of the column-*/
 }
 .about-col-1 img{
     width: 175%;
@@ -141,6 +141,7 @@ nav ul li a:hover::after{
 .tab-contents.active-tab{
     display: block
 }
+
 #portfolio{
     width: 90%;
     height: 75vh;
@@ -157,17 +158,26 @@ nav ul li a:hover::after{
     
 }
 .portfolio-items{
-    display: grid;
-    justify-content: space-evenly;
+    display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
 }
-.portfolio-items h1{
-    font-size: 50px;
-    position: relative;
+.portfolio-items > div{
+    /* each item is a certain size otherwise shrink or englargen based on given space*/
+    flex: 1 1 300px;
+    max-width: 300px;
+}
+.portfolio-items > div > img{
+    border-radius: 20%;
+}
+.portfolio-items > div > h1{
+    color: darkred;
+    margin-top: 10px;
+    font-size: 30px;
+    position: static;
 }
 .portfolio-experience{
-    width: 70%;
-    height: 70%;
     border: 10px;
     border: 10px solid black;
     border-radius: 20%;
@@ -181,23 +191,11 @@ nav ul li a:hover::after{
     padding-right: 25px;
 
     text-align: center;
-    display: inline-block;
-
-}
-.portfolio-experience img{
-    border-radius: 20%;
-}
-.portfolio-experience h1{
-    color: black;
-    margin-top: 10px;
-    font-size: 30px;
-    position: static;
 }
 .portfolio-skills{
-    width: 70%;
-    height: 70%;
     border: 10px;
     border: 10px solid black;
+    border-radius: 20%;
 
     background-color: grey;
     
@@ -208,15 +206,35 @@ nav ul li a:hover::after{
     padding-right: 25px;
 
     text-align: center;
-    display: inline-block;
+    
 }
-.portfolio-skills img{
-    border-radius: 20%
+.portfolio-biography{
+    border: 10px;
+    border: 10px solid black;
+    border-radius: 20%;
+
+    background-color: grey;
+
+    padding-top: 25px;
+    padding-bottom: 30px;
+    padding-left: 25px;
+    padding-right: 25px;
+
+    text-align: center;
 }
-.portfolio-skills h1{
-    color: black;
-    margin-top: 10px;
-    font-size: 30px;
-    position: static;
+.portfolio-education{
+    border: 10px;
+    border: 10px solid black;
+    border-radius: 20%;
+
+    background-color: grey;
+
+    padding-top: 25px;
+    padding-bottom: 30px;
+    padding-left: 25px;
+    padding-right: 25px;
+
+    text-align: center;
 }
+
 
